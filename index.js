@@ -13,7 +13,7 @@ function init() {
     }])
 
     .then(response => {
-        switch(response.UserChoice) {
+        switch(response.Directory) {
             case "View all departments":
                 viewDepartments()
                 break;

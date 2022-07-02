@@ -15,7 +15,7 @@ VALUES
     ('Account Manager', 70000, 3),
     ('Mechanical Engineer', 95000, 2),
     ('Sales Lead', 90000, 1),
-    ('Software Engineer', 75000, 3),
+    ('Software Engineer', 75000, 3);
 
 INSERT INTO employees(first_name, last_name, role_id, manager_id)
 VALUES
@@ -25,8 +25,8 @@ VALUES
 
     ('Spalding', 'Wilson', 7, NULL),
     ('Lisa', 'Cris', 9,2),
-    ('Cash', 'Maker', 8, 2);
+    ('Cash', 'Maker', 8, 2),
 
-    ('Nick', 'Kole', 3, 03),
-    ('Java', 'Script', 2, 03),
-    ('Julie', 'Node', 5, 03),
+    ('Nick', 'Kole', 3, 3),
+    ('Java', 'Script', 2, 3),
+    ('Julie', 'Node', 5, 3);
