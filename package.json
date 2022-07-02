@@ -19,7 +19,7 @@
   "dependencies": {
     "console.table": "^0.10.0",
     "dotenv": "^16.0.1",
-    "inquirer": "^9.0.0",
+    "inquirer": "^8.2.1",
     "mysql": "^2.18.1",
     "node": "^18.4.0"
   }
