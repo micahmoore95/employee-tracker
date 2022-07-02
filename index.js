@@ -87,5 +87,72 @@ function addDepartment() {
     })
 };
 
+function addRoles() {
+    inquirer.prompt([
+        {
+        type: 'input',
+        message: 'Enter title',
+        name: 'title'
+    },
+    {
+        type: 'input',
+        message: 'Enter salary',
+        name: 'salary'
+    },
+    {
+        type: 'input',
+        message: 'Enter department ID',
+        name: 'departmentId'
+    },
+])
+    .then(response => {
+        db.query('INSERT INTO roles (title, salary, department_id) VALUES(?,?,?);',
+        [response.title, response.salary, response.departmentId],
+         function(err, data){
+            if(err)
+            throw err;
+            console.table(data)
+            init();
+        })
+    })
+};
+
+function addEmployee() {
+    inquirer.prompt([
+        {
+        type: 'input',
+        message: 'Enter first name',
+        name: 'first'
+    },
+    {
+        type: 'input',
+        message: 'Enter last name',
+        name: 'last'
+    },
+    {
+        type: 'input',
+        message: 'Enter role ID',
+        name: 'roleId'
+    },
+    {
+        type: 'input',
+        message: 'Enter manager ID',
+        name: 'managerId'
+    },
+])
+    .then(response => {
+        db.query('INSERT INTO employees(first_name, last_name, role_id, manager_id) VALUES(?,?,?,?);',
+        [response.first, response.last, response.roleId, response.managerId],
+         function(err, data){
+            if(err)
+            throw err;
+            console.table(data)
+            init();
+        })
+    })
+} 
+
+
+
 
 init();
