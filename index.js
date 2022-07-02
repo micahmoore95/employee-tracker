@@ -20,8 +20,8 @@ function init() {
             case "View all roles":
                 viewRoles()
                 break;
-            case "View all employee":
-                viewEmployee()
+            case "View all employees":
+                viewEmployees()
                 break;
             case "Add a department":
                 addDepartment()
@@ -49,7 +49,43 @@ function viewDepartments() {
         console.table(data)
         init();
     })
-}
+};
+
+function viewRoles() {
+    db.query('SELECT * FROM roles;', function(err, data){
+        if(err)
+        throw err;
+        console.table(data)
+        init();
+    })
+};
+
+function viewEmployees() {
+    db.query('SELECT * FROM employees;', function(err, data){
+        if(err)
+        throw err;
+        console.table(data)
+        init();
+    })
+};
+
+function addDepartment() {
+    inquirer.prompt([{
+        type: 'input',
+        message: 'Enter department name',
+        name: 'departmentName'
+    }])
+    .then(response => {
+        db.query('INSERT INTO departments (department_name) VALUES(?);',
+        response.departmentName,
+         function(err, data){
+            if(err)
+            throw err;
+            console.table(data)
+            init();
+        })
+    })
+};
 
 
 init();
