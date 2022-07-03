@@ -14,7 +14,7 @@
   ## INSTALLATION
   download the code and run npm i and then add a .env file with your credentials
   ## USAGE
-  na
+  ![image of initial question](./assets/images/Screenshot-1.jpg)
   ## CONTRIBUTING
   Micah Moore
   ## LICENSE

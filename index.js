@@ -9,8 +9,9 @@ function init() {
         type: 'list',
         name: 'Directory',
         message: 'What would you like to do?',
-        choices: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an employee role']
+        choices: [{ name:"View all departments"}, {name: "View all roles"}, {name: "View all employees"}, {name: "Add a department"}, {name: "Add a role"}, {name: "Add an employee"}, {name: "Update an employee role"}]
     }])
+    return response.Directory
 
     .then(response => {
         switch(response.Directory) {
